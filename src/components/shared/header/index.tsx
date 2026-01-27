@@ -1,5 +1,7 @@
+// import { Button } from "@/components/ui/button";/
 import { Button } from "@/components/ui/button";
-import { APP_NAME } from "@/lib/constants";
+// import { APP_NAME} from "@/lib/constants";
+import { APP_NAME } from "../../../lib/constants";
 import { ShoppingCart, UserIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,12 +30,12 @@ function Header() {
           <ToggleTheme />
           <Button asChild variant="ghost">
             <Link href="/cart">
-              <ShoppingCart /> Cart
+              <ShoppingCart /> 
             </Link>
           </Button>
           <Button asChild>
             <Link href="/cart">
-              <UserIcon /> Sign In
+              <UserIcon /> Log In
             </Link>
           </Button>
         </div>

@@ -1,32 +1,21 @@
-"use client";
-import { Button } from "@/components/ui/button";
-import { APP_NAME } from "@/lib/constants";
-import Image from "next/image";
-import React from "react";
+"use client"
+import Image from 'next/image'
+import React from 'react'
+import { APP_NAME } from '../lib/constants'
+import { Button } from '@/components/ui/button'
 
-function NotFoundPage() {
+function notfound() {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen">
-      <Image
-        src="/images/logo.svg"
-        height={48}
-        width={48}
-        alt={`${APP_NAME} logo`}
-        priority={true}
-      />
-      <div className="p-6 rounded-lg shadow-md text-center w-1/3">
-        <h1 className="text-3xl font-bold mb-4">Not Found</h1>
-        <p className="text-destructive">Count not find requested page</p>
-        <Button
-          variant="outline"
-          className="mt-4 ml-2"
-          onClick={() => (window.location.href = "/")}
-        >
-          Back to Home
-        </Button>
-      </div>
+    <div className='min-h-screen flex flex-col items-center justify-center '>
+        <Image  src={""} alt={`${APP_NAME} `}/>
+        <div className="p-6 text-center shadow-sm">
+            <h1 className='text-3xl font-bold'>Not Found...</h1>
+            {/* <Button variant={'outline'} onClick={()=> (window.location}> */}
+                Back to Home
+            {/* </Button> */}
+        </div>
     </div>
-  );
+  )
 }
 
-export default NotFoundPage;
+export default notfound

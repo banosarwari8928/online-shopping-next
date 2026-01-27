@@ -1,20 +1,12 @@
-import React from "react";
-import Image from "next/image";
-import loader from "../app/assets/loader.gif";
-function LoadingPage() {
+import React from 'react'
+import loader from "./assets/loader.gif"
+import Image from 'next/image'
+function loading() {
   return (
-    <div
-      style={{
-        height: "100vh",
-        width: "100vw",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Image src={loader} height={150} width={150} alt="Loading" />
+    <div className='flex h-screen w-full items-center text-center justify-center'>
+        <Image src={loader} alt="lodaing" height={100} width={100} />
     </div>
-  );
+  )
 }
 
-export default LoadingPage;
+export default loading
