@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import ToggleTheme from "./toggle-mode";
+import Menu from "./menu";
 
 function Header() {
   return (
@@ -26,19 +27,7 @@ function Header() {
             </span>
           </Link>
         </div>
-        <div className="space-x-2">
-          <ToggleTheme />
-          <Button asChild variant="ghost">
-            <Link href="/cart">
-              <ShoppingCart /> 
-            </Link>
-          </Button>
-          <Button asChild>
-            <Link href="/cart">
-              <UserIcon /> Log In
-            </Link>
-          </Button>
-        </div>
+        <Menu />
       </div>
     </header>
   );
