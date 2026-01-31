@@ -1,18 +1,22 @@
 import React from 'react'
 
-function productList({data,title}:{data:any,title?:string}) {
+function ProductList({data,title}:{data:any,title?:string}) {
 
   return (
     <div>
-    <div className='w-full '>
-        {/* {title:(
+    <div className='w-full my-10'>
+        {title?(
         <h2 className="h2-bold mb-4">
             {title}
-        </h2>):"";}
-         */}1
+        </h2>):""}
+    </div>
+    <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ">
+      {data.map((product:any)=>(
+        <h1 key={product.slug}>{product.name}</h1>
+      ))}
     </div>
     </div>
   )
 }
 
-export default productList
+export default ProductList
