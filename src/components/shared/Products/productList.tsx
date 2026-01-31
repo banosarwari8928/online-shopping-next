@@ -1,6 +1,7 @@
 import React from 'react'
 import Product from './Product';
 
+
 function ProductList({data,title,limit}:{data:any,title?:string; limit?:number
 }) {
   const limiteData=limit?data.slice(0,4):data;
