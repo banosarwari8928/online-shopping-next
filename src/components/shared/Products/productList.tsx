@@ -1,7 +1,9 @@
 import React from 'react'
+import Product from './Product';
 
-function ProductList({data,title}:{data:any,title?:string}) {
-
+function ProductList({data,title,limit}:{data:any,title?:string; limit?:number
+}) {
+  const limiteData=limit?data.slice(0,4):data;
   return (
     <div>
     <div className='w-full my-10'>
@@ -10,11 +12,13 @@ function ProductList({data,title}:{data:any,title?:string}) {
             {title}
         </h2>):""}
     </div>
-    <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ">
-      {data.map((product:any)=>(
-        <h1 key={product.slug}>{product.name}</h1>
+    {limiteData.lenght> 0?(
+    <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-col-3 ">
+      {limiteData.map((product:any)=>(
+        <Product key={product.slug} >{product.name}</Product>
       ))}
     </div>
+    ):(<p>no thing exists</p>)}
     </div>
   )
 }
