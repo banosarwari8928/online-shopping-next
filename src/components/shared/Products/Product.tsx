@@ -3,8 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import ProductPrice from './Pro-Price'
+import { ProductInfo } from '@/components/types/proType'
 
-function Product({product}:{product:any}) {
+function Product({product}:{product:ProductInfo[]}) {
   return (
    <Card className='w-full max-w-sm '>
     <CardHeader className='items-center'> 

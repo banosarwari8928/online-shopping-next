@@ -1,8 +1,9 @@
 import React from 'react'
 import Product from './Product';
+import { ProductInfo } from '@/components/types/proType';
 
 
-function ProductList({data,title,limit}:{data:any,title?:string; limit?:number
+function ProductList({ data,title,limit}:{ data:ProductInfo[],title?:string; limit?:number
 }) {
   const limiteData=limit?data.slice(0,4):data;
   return (
@@ -13,11 +14,11 @@ function ProductList({data,title,limit}:{data:any,title?:string; limit?:number
             {title}
         </h2>):""}
     </div>
-    {limiteData.lenght> 0?(
-    <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-col-3 ">
+    {limiteData.length> 0?(
+    <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ">
       {limiteData.map((product:any)=>(
-        <Product key={product.slug} >{product.name}</Product>
-      ))}
+     <Product key={product.slug} product={product} />
+      ))}                   
     </div>
     ):(<p>no thing exists</p>)}
     </div>
