@@ -10,4 +10,4 @@ async function seed() {
   )
 }
 
-export default seed
+export default seed;
