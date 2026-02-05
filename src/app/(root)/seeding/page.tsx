@@ -1,13 +1,16 @@
 import React from 'react'
 import sampleData from '@/db/data'
 import { prisma } from '@/lib/db/lib'
-async function seed() {
+async function Seed() {
     await prisma.product.deleteMany();
     await prisma.product.createMany({data:sampleData.products});
-    console.log("seeded successfully");
+    console.log("seeded");
+
   return (
-    <div>seeding the Data into Database</div>
+    <div>
+        Seeding Data 
+    </div>
   )
 }
-
-export default seed;
+ 
+export default Seed
