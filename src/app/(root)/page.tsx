@@ -1,18 +1,12 @@
-// import { div } from "framer-motion/client";
-import Product from "@/components/shared/Products/Product";
-import ProductList from "@/components/shared/Products/productList";
-import { Button } from "@/components/ui/button";
-import sampleData from "@/db/data";
-import Image from "next/image";
+import ProductList from "@/components/shared/products/product-list";
+import { getLatestProducts } from "@/lib/action/product.action";
+// import { ProductI } from "@/types";
 
 export default async function Home() {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
-
+  const data = await getLatestProducts();
   return (
-    <div> 
-    <ProductList data={sampleData.products} title="Newest Arrivel" limit={4} />
+    <div>
+      <ProductList data={data} title="Newest Arrival" />
     </div>
   );
-  // route nav, footer
-  
 }

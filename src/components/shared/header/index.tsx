@@ -1,12 +1,10 @@
-// import { Button } from "@/components/ui/button";/
-import { Button } from "@/components/ui/button";
-// import { APP_NAME} from "@/lib/constants";
-import { APP_NAME } from "../../../lib/constants";
-import { ShoppingCart, UserIcon } from "lucide-react";
+import { APP_NAME } from "@/lib/constants";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import ToggleTheme from "./toggle-mode";
+import { Button } from "@/components/ui/button";
+import { ShoppingCart, UserIcon } from "lucide-react";
 import Menu from "./menu";
 
 function Header() {
@@ -34,11 +32,3 @@ function Header() {
 }
 
 export default Header;
-
-
-
-
-
-
-
-
