@@ -14,4 +14,5 @@ export default async function Home() {
     </div>
   );
   // route nav, footer
+  
 }
