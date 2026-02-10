@@ -3,20 +3,22 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import ProductPrice from "./product-price";
-import { ProductInfo } from "@/types";
+import { ProductInfo } from "../../../../types";
 
 function Product({ product }: { product: ProductInfo }) {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader className="items-center p-0">
         <Link href={`product/${product.slug}`}>
-          <Image
-            src={product.images[0]}
-            alt={product.name}
-            height={300}
-            width={300}
-            priority={true}
-          />
+          {product?.images?.[0] && (
+  <Image
+    src={product.images[0]}
+    alt={product.name}
+    height={300}
+    width={300}
+    priority
+  />
+)}
         </Link>
       </CardHeader>
       <CardContent className="p-4 grid gap-4">
